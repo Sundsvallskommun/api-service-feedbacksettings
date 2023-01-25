@@ -1,0 +1,143 @@
+{
+	"_meta": {
+		"page": 1,
+		"limit": 20,
+		"count": 5,
+		"totalRecords": 5,
+		"totalPages": 1
+	},
+	"feedbackSettings": [
+		{
+			"id": "9a24743c-5c19-4774-954e-a3ad67a734e4",
+			"personId": "49a974ea-9137-419b-bcb9-ad74c81a1d3f",
+			"organizationId": "15aee472-46ab-4f03-9605-68bd64ebc84a",
+			"filters": [],
+			"channels": [
+				{
+					"contactMethod": "EMAIL",
+					"alias": "Victor the cleaner",
+					"destination": "representative.1@company.com",
+					"sendFeedback": false
+				},
+				{
+					"contactMethod": "SMS",
+					"alias": "Victor the cleaner",
+					"destination": "0796100004",
+					"sendFeedback": true
+				}
+			],
+			"created": "2022-01-10T10:00:00+01:00",
+			"matchingPercent": 100
+		},
+		{
+			"id": "9a24743c-5c19-4774-954e-a3ad67a734e5",
+			"personId": "49a974ea-9137-419b-bcb9-ad74c81a1d4f",
+			"organizationId": "15aee472-46ab-4f03-9605-68bd64ebc84a",
+			"filters": [],
+			"channels": [
+				{
+					"contactMethod": "EMAIL",
+					"alias": "Vincent Vega",
+					"destination": "representative.2@company.com",
+					"sendFeedback": true
+				},
+				{
+					"contactMethod": "SMS",
+					"alias": "Vincent Vega",
+					"destination": "0796100005",
+					"sendFeedback": true
+				},
+				{
+					"contactMethod": "SMS",
+					"alias": "Vincent Vega",
+					"destination": "0786100005",
+					"sendFeedback": true
+				}
+			],
+			"created": "2022-01-10T10:00:00+01:00",
+			"matchingPercent": 100
+		},
+		{
+			"id": "9a24743c-5c19-4774-954e-a3ad67a734e7",
+			"personId": "49a974ea-9137-419b-bcb9-ad74c81a1d6f",
+			"organizationId": "15aee472-46ab-4f03-9605-68bd64ebc84a",
+			"filters": [
+				{
+					"key": "CATEGORIES",
+					"values": [
+						"broadband"
+					]
+				}
+			],
+			"channels": [
+				{
+					"contactMethod": "SMS",
+					"alias": "0796100007",
+					"destination": "0796100007",
+					"sendFeedback": true
+				}
+			],
+			"created": "2022-01-10T10:00:00+01:00",
+			"matchingPercent": 100
+		},
+		{
+			"id": "9a24743c-5c19-4774-954e-a3ad67a734e6",
+			"personId": "49a974ea-9137-419b-bcb9-ad74c81a1d5f",
+			"organizationId": "15aee472-46ab-4f03-9605-68bd64ebc84a",
+			"filters": [
+				{
+					"key": "MESSAGETYPES",
+					"values": [
+						"disturbance"
+					]
+				},
+				{
+					"key": "CATEGORIES",
+					"values": [
+						"broadband"
+					]
+				}
+			],
+			"channels": [
+				{
+					"contactMethod": "SMS",
+					"alias": "Mister Pink",
+					"destination": "0796100006",
+					"sendFeedback": true
+				}
+			],
+			"created": "2022-01-10T10:00:00+01:00",
+			"matchingPercent": 67
+		},
+		{
+			"id": "9a24743c-5c19-4774-954e-a3ad67a734e8",
+			"personId": "49a974ea-9137-419b-bcb9-ad74c81a1d7f",
+			"organizationId": "15aee472-46ab-4f03-9605-68bd64ebc84a",
+			"filters": [
+				{
+					"key": "MESSAGETYPES",
+					"values": [
+						"disturbance",
+						"information"
+					]
+				},
+				{
+					"key": "CATEGORIES",
+					"values": [
+						"electricity"
+					]
+				}
+			],
+			"channels": [
+				{
+					"contactMethod": "SMS",
+					"alias": "0796100008",
+					"destination": "0796100008",
+					"sendFeedback": true
+				}
+			],
+			"created": "2022-01-10T10:00:00+01:00",
+			"matchingPercent": 33
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"id":"9a24743c-5c19-4774-954e-a3ad67a734e2",
+	"personId":"49a974ea-9137-419b-bcb9-ad74c81a1d2f",
+	"filters":[],
+	"channels":[
+		{
+			"contactMethod":"SMS",
+			"alias": "This is the number to use",
+			"destination":"0796100222",
+			"sendFeedback":false
+		},
+		{
+			"contactMethod":"EMAIL",
+			"alias":"updated.person.2@company.com",
+			"destination":"updated.person.2@company.com",
+			"sendFeedback":false
+		}
+	],
+	"created": "${json-unit.any-string}",
+	"modified": "${json-unit.any-string}"
+}

@@ -1,0 +1,15 @@
+{
+	"channels": [
+		{
+			"contactMethod": "SMS",
+			"alias": "This is the number to use",
+			"destination": "0796100222",
+			"sendFeedback": false
+		},
+		{
+			"contactMethod": "EMAIL",
+			"destination": "updated.person.2@company.com",
+			"sendFeedback": false
+		}
+	]
+}

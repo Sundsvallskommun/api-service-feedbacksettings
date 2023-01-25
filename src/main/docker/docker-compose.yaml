@@ -1,0 +1,16 @@
+version: "3"
+services:
+  feedbacksettings:
+    # TODO add correct name matching nexus repository also add build number parameter as suffix
+    image: 'ms-feedbacksettings:latest'
+    restart: always
+    build:
+      context: ../../..
+      dockerfile: src/main/docker/Dockerfile
+    ports:
+        - '9090:9090'
+    environment:
+      SPRING_PROFILES_ACTIVE: 'test'
+      SPRING_CLOUD_CONFIG_URI: '<url>'
+      SPRING_CLOUD_CONFIG_USERNAME: '<username>'
+      SPRING_CLOUD_CONFIG_PASSWORD: '<password>'

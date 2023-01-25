@@ -1,0 +1,28 @@
+{
+	"id": "9a24743c-5c19-4774-954e-a3ad67a734e5",
+	"personId": "49a974ea-9137-419b-bcb9-ad74c81a1d4f",
+	"organizationId": "15aee472-46ab-4f03-9605-68bd64ebc84a",
+	"filters":[],
+	"channels": [
+		{
+			"contactMethod": "EMAIL",
+			"alias": "Victor, the new cleaner person",
+			"destination": "updated.representative.2@company.com",
+			"sendFeedback": false
+		},
+		{
+			"contactMethod": "SMS",
+			"alias": "Vincent Vega",
+			"destination": "0796100005",
+			"sendFeedback": false
+		},
+		{
+			"contactMethod": "SMS",
+			"alias": "0796100006",
+			"destination": "0796100006",
+			"sendFeedback": true
+		}
+	],
+	"created": "${json-unit.any-string}",
+	"modified": "${json-unit.any-string}"
+}

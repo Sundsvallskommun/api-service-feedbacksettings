@@ -1,0 +1,20 @@
+{
+	"channels": [
+		{
+			"contactMethod": "SMS",
+			"destination": "0796100002",
+			"sendFeedback": false
+		},
+		{
+			"contactMethod": "EMAIL",
+			"destination": "person.2@company.com",
+			"sendFeedback": true
+		},
+		{
+			"contactMethod": "EMAIL",
+			"alias": "Vincent Vega",
+			"destination": "added.email@company.com",
+			"sendFeedback": true
+		}
+	]
+}

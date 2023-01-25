@@ -1,0 +1,26 @@
+{
+	"id":"${json-unit.any-string}",
+	"personId":"49a974ea-9137-419b-bcb9-ad74c81a1d1a",
+	"filters":[],
+	"channels":[
+		{
+			"contactMethod":"SMS",
+			"alias":"Primary mobile number",
+			"destination":"0791100001",
+			"sendFeedback":true
+		},
+		{
+			"contactMethod":"SMS",
+			"alias":"Secondary mobile number",
+			"destination":"0791100002",
+			"sendFeedback":false
+		},
+		{
+			"contactMethod":"EMAIL",
+			"alias":"test1@successful.create",
+			"destination":"test1@successful.create",
+			"sendFeedback":true
+		}
+	],
+	"created": "${json-unit.any-string}"
+}

@@ -1,0 +1,20 @@
+{
+	"id":"9a24743c-5c19-4774-954e-a3ad67a734e2",
+	"personId":"49a974ea-9137-419b-bcb9-ad74c81a1d2f",
+	"filters":[],
+	"channels": [
+		{
+			"contactMethod": "EMAIL",
+			"alias": "person.2@company.com",
+			"destination": "person.2@company.com",
+			"sendFeedback": true
+		},
+		{
+			"contactMethod": "SMS",
+			"alias": "Private mobile",
+			"destination": "0796100002",
+			"sendFeedback": true
+		}
+	],
+	"created":"2022-01-10T10:00:00+01:00"
+}

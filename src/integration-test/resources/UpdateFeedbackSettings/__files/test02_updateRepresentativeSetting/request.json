@@ -1,0 +1,21 @@
+{
+	"channels": [
+		{
+			"contactMethod": "SMS",
+			"alias": "Vincent Vega",
+			"destination": "0796100005",
+			"sendFeedback": false
+		},
+		{
+			"contactMethod": "SMS",
+			"destination": "0796100006",
+			"sendFeedback": true
+		},
+		{
+			"contactMethod": "EMAIL",
+			"alias": "Victor, the new cleaner person",
+			"destination": "updated.representative.2@company.com",
+			"sendFeedback": false
+		}
+	]
+}
