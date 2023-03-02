@@ -1,7 +1,5 @@
 package se.sundsvall.feedbacksettings.api.validation.impl;
 
-import static java.lang.String.valueOf;
-
 import java.lang.annotation.Annotation;
 
 import javax.validation.ConstraintValidator;
@@ -17,6 +15,6 @@ public class PatternValidator<A extends Annotation> implements ConstraintValidat
 	
 	@Override
 	public boolean isValid(CharSequence value, ConstraintValidatorContext context) {
-		return valueOf(value).matches(pattern);
+		return String.valueOf(value).matches(pattern);
 	}
 }
