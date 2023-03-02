@@ -17,7 +17,8 @@ public class MappingUtils {
 	private MappingUtils() {}
 	
 	/**
-	 * Returns all removed FeedbackChannelEmbeddable elements from oldSettingsEntity.getFeedbackChannels(), when comparing with
+	 * Returns all removed FeedbackChannelEmbeddable elements from oldSettingsEntity.getFeedbackChannels(), when comparing
+	 * with
 	 * newFeedbackChannels.
 	 * 
 	 * E.g.
@@ -27,9 +28,9 @@ public class MappingUtils {
 	 * 
 	 * Result: This method will return [<ELEMENT-2>]
 	 * 
-	 * @param oldSettingsEntity
-	 * @param newFeedbackChannels
-	 * @return Returns the difference (removed elements) from oldSettingsEntity.
+	 * @param oldSettingsEntity   the entity containing the feedback channels that are to be compared
+	 * @param newFeedbackChannels the collection of new feedback channels to compare against
+	 * @return the elements that exists in the oldSettingsEntity and absent in the newFeedbackChannels.
 	 */
 	public static List<FeedbackChannelEmbeddable> getRemovedFeedbackChannels(FeedbackSettingEntity oldSettingsEntity, List<FeedbackChannelEmbeddable> newFeedbackChannels) {
 		// If affectedEntities in newFeedbackChannels isn't set (i.e. is null), just return an empty list.
@@ -52,9 +53,9 @@ public class MappingUtils {
 	 * 
 	 * Result: This method will return [<ELEMENT-4>]
 	 * 
-	 * @param oldSettingsEntity
-	 * @param newFeedbackChannels
-	 * @return Returns the added elements from newFeedbackChannels.
+	 * @param oldSettingsEntity   the entity containing the feedback channels that are to be compared
+	 * @param newFeedbackChannels the collection of new feedback channels to compare against
+	 * @return the elements that exists in the newFeedbackChannels and absent in the oldSettingsEntity.
 	 */
 	public static List<FeedbackChannelEmbeddable> getAddedFeedbackChannels(FeedbackSettingEntity oldSettingsEntity, List<FeedbackChannelEmbeddable> newFeedbackChannels) {
 		if (isNull(oldSettingsEntity) || isNull(oldSettingsEntity.getFeedbackChannels())) {
@@ -79,7 +80,8 @@ public class MappingUtils {
 	}
 	
 	/**
-	 * Returns all removed FeedbackFilterEmbeddable elements from oldSettingsEntity.getFeedbackFilters(), when comparing with
+	 * Returns all removed FeedbackFilterEmbeddable elements from oldSettingsEntity.getFeedbackFilters(), when comparing
+	 * with
 	 * newFilters.
 	 * 
 	 * E.g.
@@ -89,9 +91,9 @@ public class MappingUtils {
 	 * 
 	 * Result: This method will return [<ELEMENT-2>]
 	 * 
-	 * @param oldSettingsEntity
-	 * @param newFeedbackFilters
-	 * @return Returns the difference (removed elements) from oldSettingsEntity.
+	 * @param oldSettingsEntity  the entity containing the filters that are to be compared
+	 * @param newFeedbackFilters the collection of new filters to compare against
+	 * @return the elements that exists in the oldSettingsEntity and absent in the newFeedbackFilters.
 	 */
 	public static List<FeedbackFilterEmbeddable> getRemovedFeedbackFilters(FeedbackSettingEntity oldSettingsEntity, List<FeedbackFilterEmbeddable> newFeedbackFilters) {
 		// If affectedEntities in newFeedbackChannels isn't set (i.e. is null), just return an empty list.
@@ -114,9 +116,9 @@ public class MappingUtils {
 	 * 
 	 * Result: This method will return [<ELEMENT-4>]
 	 * 
-	 * @param oldSettingsEntity
-	 * @param newFeedbackFilters
-	 * @return Returns the added elements from newFilters.
+	 * @param oldSettingsEntity  the entity containing the filters that are to be compared
+	 * @param newFeedbackFilters the collection of new filters to compare against
+	 * @return the elements that exists in the newFeedbackFilters and absent in the oldSettingsEntity.
 	 */
 	public static List<FeedbackFilterEmbeddable> getAddedFeedbackFilters(FeedbackSettingEntity oldSettingsEntity, List<FeedbackFilterEmbeddable> newFeedbackFilters) {
 		if (isNull(oldSettingsEntity) || isNull(oldSettingsEntity.getFeedbackFilters())) {

@@ -5,6 +5,7 @@ import static java.time.temporal.ChronoUnit.MILLIS;
 
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Objects;
 
@@ -159,12 +160,12 @@ public class FeedbackSettingEntity implements Serializable {
 
 	@PrePersist
 	void prePersist() {
-		created = now().truncatedTo(MILLIS);
+		created = now(ZoneId.systemDefault()).truncatedTo(MILLIS);
 	}
 
 	@PreUpdate
 	public void preUpdate() {
-		modified = now().truncatedTo(MILLIS);
+		modified = now(ZoneId.systemDefault()).truncatedTo(MILLIS);
 	}
 
 	@Override
