@@ -6,7 +6,6 @@ import static reactor.util.function.Tuples.of;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.function.Predicate;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -20,7 +19,7 @@ public class UniqueFeedbackChannelsConstraintValidator implements ConstraintVali
 	public boolean isValid(final Collection<RequestedFeedbackChannel> value, final ConstraintValidatorContext context) {
 		Collection<RequestedFeedbackChannel> nonEmptyElements = ofNullable(value).orElse(Collections.emptyList())
 			.stream()
-			.filter(containsData())
+			.filter(channel -> allNotNull(channel, channel.getContactMethod(), channel.getDestination()))
 			.toList();
 
 		long distictElements = nonEmptyElements.stream()
@@ -29,9 +28,5 @@ public class UniqueFeedbackChannelsConstraintValidator implements ConstraintVali
 			.count();
 
 		return distictElements == nonEmptyElements.size();
-	}
-
-	private static Predicate<RequestedFeedbackChannel> containsData() {
-		return p -> allNotNull(p, p.getContactMethod(), p.getDestination());
 	}
 }

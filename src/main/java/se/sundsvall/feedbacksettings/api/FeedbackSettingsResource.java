@@ -12,8 +12,6 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -52,8 +50,6 @@ import se.sundsvall.feedbacksettings.service.FeedbackSettingsService;
 @Tag(name = "FeedbackSettings", description = "Feedback settings")
 public class FeedbackSettingsResource {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(FeedbackSettingsResource.class);
-
 	@Autowired
 	private FeedbackSettingsService feedbackSettingsService;
 
@@ -63,7 +59,6 @@ public class FeedbackSettingsResource {
 	@ApiResponse(responseCode = "400", description = "Bad request", content = @Content(mediaType = APPLICATION_PROBLEM_JSON_VALUE, schema = @Schema(oneOf = { Problem.class, ConstraintViolationProblem.class })))
 	@ApiResponse(responseCode = "500", description = "Internal Server error", content = @Content(mediaType = APPLICATION_PROBLEM_JSON_VALUE, schema = @Schema(implementation = Problem.class)))
 	public ResponseEntity<FeedbackSetting> createFeedbackSetting(UriComponentsBuilder uriComponentsBuilder, @NotNull @Valid @RequestBody CreateFeedbackSettingRequest body) {
-		LOGGER.debug("Received createFeedbackSetting()-request: body='{}'", body);
 
 		FeedbackSetting setting = feedbackSettingsService.createFeedbackSetting(body);
 		return created(uriComponentsBuilder.path("/settings/{id}").buildAndExpand(setting.getId()).toUri()).body(setting);
@@ -78,7 +73,6 @@ public class FeedbackSettingsResource {
 	public ResponseEntity<FeedbackSetting> updateFeedbackSetting(
 		@Parameter(name = "id", description = "Feedback setting ID", example = "81471222-5798-11e9-ae24-57fa13b361e1") @ValidUuid @PathVariable(name = "id", required = true) String id,
 		@NotNull @Valid @RequestBody UpdateFeedbackSettingRequest body) {
-		LOGGER.debug("Received updateFeedbackSetting()-request: id='{}', body='{}'", id, body);
 
 		return ok(feedbackSettingsService.updateFeedbackSetting(id, body));
 	}
@@ -91,7 +85,6 @@ public class FeedbackSettingsResource {
 	@ApiResponse(responseCode = "500", description = "Internal Server error", content = @Content(schema = @Schema(implementation = Problem.class)))
 	public ResponseEntity<Void> deleteFeedbackSetting(
 		@Parameter(name = "id", description = "Feedback setting ID", example = "81471222-5798-11e9-ae24-57fa13b361e1") @ValidUuid @PathVariable(name = "id", required = true) String id) {
-		LOGGER.debug("Received deleteFeedbackSetting()-request: id='{}'", id);
 
 		feedbackSettingsService.deleteFeedbackSetting(id);
 		return noContent().build();
@@ -105,7 +98,6 @@ public class FeedbackSettingsResource {
 	@ApiResponse(responseCode = "500", description = "Internal Server error", content = @Content(mediaType = APPLICATION_PROBLEM_JSON_VALUE, schema = @Schema(implementation = Problem.class)))
 	public ResponseEntity<FeedbackSetting> getFeedbackSettingById(
 		@Parameter(name = "id", description = "Feedback setting ID", example = "81471222-5798-11e9-ae24-57fa13b361e1") @ValidUuid @PathVariable(name = "id", required = true) String id) {
-		LOGGER.debug("Received getFeedbackSettingById()-request: id='{}'", id);
 
 		return ResponseEntity.ok(feedbackSettingsService.getFeedbackSettingById(id));
 	}
